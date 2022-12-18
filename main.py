@@ -4,7 +4,7 @@ driver = webdriver.Chrome("/Applications/chromedriver")
 files=open('HUH_rec.csv').readlines()
 
 def scraper(family,collection_ID):
-	driver.get("http://www.cvh.ac.cn/spms/list.php?taxonName=&family="+family+"&genus=&country=&county=&locality=&altitude=&recordedBy=&recordNumber="+collection_ID+"&year=&collectionCode=&identifiedBy=&dateIdentified=“)
+	driver.get("http://www.cvh.ac.cn/spms/list.php?taxonName=&family="+family+"&genus=&country=&county=&locality=&altitude=&recordedBy=&recordNumber="+collection_ID+"&year=&collectionCode=&identifiedBy=&dateIdentified=")
 	soup = BeautifulSoup(driver.page_source)
 	result=soup.find_all('tr',attrs={'class':'spms-row'})
 	result[0].attrs['data-collection-id']
