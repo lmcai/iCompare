@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
-driver = webdriver.Chrome("/Applications/chromedriver”)
+driver = webdriver.Chrome("/Applications/chromedriver")
 files=open('HUH_rec.csv').readlines()
 
 def scraper(family,collection_ID):
